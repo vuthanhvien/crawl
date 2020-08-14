@@ -1,7 +1,8 @@
+
+
 const request = require('request-promise')
 const cheerio = require('cheerio')
 const URL = 'https://sachvui.com/'
-
 
 const getPageContent = (uri) => {
     const options = {
@@ -16,13 +17,12 @@ const getPageContent = (uri) => {
 
     return request(options)
 }
- 
 
-async function  getContent (){
+
+async function getContent() {
     var $ = await getPageContent(URL);
     console.log($)
 }
-
 
 getContent();
 
